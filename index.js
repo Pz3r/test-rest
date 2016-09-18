@@ -7,7 +7,8 @@ app.set('view engine', 'ejs');
 app.get('/', function(req, res) {
   var apis = {
     apis: [
-      {path: '/tmnt', description: 'Teenage Mutant Ninja Turtles'}
+      {path: '/tmnt', description: 'Teenage Mutant Ninja Turtles'},
+      {path: '/shredder', description: 'TMNS main antagonist'}
     ],
   };
 
@@ -19,6 +20,16 @@ app.get('/tmnt', function(req, res) {
     {
       members: ['Donatello', 'Leonardo', 'Michelangelo', 'Raphael'],
       alignment: 'good'
+      villain: '/shredder'
+    }
+  );
+});
+
+app.get('/shredder', function(req, res) {
+  res.json(
+    {
+      affiliations: ['Foot Clan'],
+      alignment: 'bad'
     }
   );
 });
