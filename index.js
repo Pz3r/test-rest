@@ -19,7 +19,7 @@ app.get('/tmnt', function(req, res) {
   res.json(
     {
       members: ['Donatello', 'Leonardo', 'Michelangelo', 'Raphael'],
-      alignment: 'good'
+      alignment: 'good',
       villain: '/shredder'
     }
   );
