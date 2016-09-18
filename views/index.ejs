@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Test Rest API</title>
+  </head>
+  <body>
+    <h1>Just a simple API for testing</h1>
+    <ul>
+      <% for(var i = 0; i < apis.length; i++) { %>
+        <li><a href="<%= apis[i].path %>"><%= apis[i].path %></a> : <%= apis[i].description %></li>
+      <% } %>
+    </ul>
+  </body>
+</html>
